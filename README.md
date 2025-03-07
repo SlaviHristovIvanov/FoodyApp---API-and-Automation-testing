@@ -1,59 +1,76 @@
 # FoodyApp API and Automation Testing
-This repository contains API test cases and test management files for the FoodyApp project.
+This repository contains API test cases, automation tests, and test management files for the TestHub project.
+
+Project Overview
+
+TestHub is a project designed to streamline the process of test automation, API testing, and test management. It includes the following:
+
+Test Management: Structured test cases and bug tracking.
+API Testing: Automated tests for testing API endpoints.
+Automation Testing: Functional tests using Pytest for validating application behavior.
+This repository aims to provide a comprehensive solution for testing by combining manual test management, automated API tests, and continuous integration with test automation.
+
+ Repository Structure
+
+FoodyApp-API-Automation
+┣ 📂 automation_tests/
+┃ ┣ 📜 __init__.py
+┃ ┣ 📜 test_email_format_validation.py        # Email format validation tests
+┃ ┣ 📜 test_field_length.py                   # Field length validation tests
+┃ ┣ 📜 test_login_functionality.py            # Login functionality tests
+┃ ┣ 📜 test_password_strength.py              # Password strength validation tests
+┃ ┣ 📜 test_session_expiry.py                 # Session timeout validation tests
+┃ ┣ 📜 test_sql_injection.py                  # SQL injection prevention tests
+┣ 📜 TestHub-Test-Management.xlsx             # Test cases & bug tracking
+┣ 📜 TestHub-API-Collection.postman_collection.json  # Postman API testing collection
+┣ 📜 README.md                                # Project documentation
 Test Management & Bug Tracking
 
-*** Project Overview ***
+The TestHub-Test-Management.xlsx file contains structured test cases and bug tracking for TestHub. It includes:
 
-FoodyApp is a food ordering and management system that allows users to create, manage, and delete food items. This repository includes:
+Test Case ID: Unique identifier for each test case.
+Test Description: Brief explanation of the test.
+Steps to Reproduce: Instructions to execute the test case.
+Expected Result: What the test case is expected to return.
+Actual Result: The actual outcome when the test is executed.
+Bug Status: Track whether a bug has been found.
+📌 How to Use:
+Open the TestHub-Test-Management.xlsx file using Microsoft Excel or Google Sheets.
+Log new test cases and update results as testing progresses.
+Use the bug status section to track and manage any defects found during testing.
+🔥 API Testing with Postman
 
-A Test Management & Bug Tracker (.xls) for manual testing.
+The TestHub-API-Collection.postman_collection.json file contains API test cases for the TestHub project. These tests validate key functionalities of the API endpoints.
 
-A Postman API Collection (.json) for automated API testing.
-
-The Foody1.xls file contains structured test cases for the FoodyApp application, including:
-
-Test Case ID
-
-Test Description
-
-Steps to Reproduce
-
-Expected Result
-
-Actual Result
-
-Bug Status
-
-*** How to Use *** :
-
-Open the .xls file using Microsoft Excel or Google Sheets.
-
-Log test cases and update results as needed.
-
-Track bug reports efficiently.
-
-API Testing with Postman
-
-The FoodyApp.postman_collection.json file includes API test cases for:
-
-User Authentication (/api/User/Authentication)
-
-Create Food Item (/api/Food/Create)
-
-Get All Food Items (/api/Food/All)
-
-Delete Food Item (/api/Food/Delete/{foodId})
-
-User Registration (/api/User/Create)
-
-*** How to Use Postman Collection ***:
-
+🚀 How to Use the Postman Collection:
 Import the Collection:
-
 Open Postman.
+Click File > Import and select the TestHub-API-Collection.postman_collection.json file.
+Set Up Authentication:
+Update the Bearer Token in the request headers as per your authentication method.
+Run API Tests:
+Click Send to test each endpoint.
+View the responses and debug issues as needed.
+API Endpoints Tested:
+User Authentication (/api/User/Authentication)
+Create Idea (/api/Idea/Create)
+Get All Ideas (/api/Idea/All)
+Edit Idea (/api/Idea/Edit?ideaId={id})
+Delete Idea (/api/Idea/Delete?ideaId={id})
+🤖 Automation Testing with Pytest
 
-Click File > Import and select FoodyApp.postman_collection.json.
+The automation_tests/ folder contains automated test scripts written using Pytest for validating various functionalities of the TestHub application.
 
-Set Up Environment Variables:
+🧪 Implemented Tests:
+Email Format Validation (test_email_format_validation.py): Validates the correct format of email addresses.
+Field Length Validation (test_field_length.py): Ensures that input fields meet minimum length requirements.
+Login Functionality (test_login_functionality.py): Verifies correct login functionality for valid and invalid users.
+Password Strength Validation (test_password_strength.py): Tests that passwords meet the security criteria.
+Session Expiry Handling (test_session_expiry.py): Ensures that the session expires correctly after a certain period of inactivity.
+SQL Injection Prevention (test_sql_injection.py): Tests that inputs are protected against SQL injection attacks.
 
-Ensure authentication tokens are updated in the request headers.
+Tools & Technologies
+
+Pytest: For automated functional testing.
+Postman: For API testing and collection management.
+Excel/Google Sheets: For manual test management and bug tracking.
