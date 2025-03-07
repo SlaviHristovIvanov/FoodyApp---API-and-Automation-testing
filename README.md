@@ -1,4 +1,4 @@
-# FoodyApp---API-Testing-Test-Management
+# FoodyApp API and Automation Testing
 This repository contains API test cases and test management files for the FoodyApp project.
 Test Management & Bug Tracking
 
